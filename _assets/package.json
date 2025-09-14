@@ -1,0 +1,29 @@
+{
+  "name": "build-tasks",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "GPL-2.0",
+      "url": "https://opensource.org/licenses/GPL-2.0"
+    }
+  ],
+  "author": "Jon Penny <jon@jonppenny.co.uk>",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf ../path/to/dist && rimraf .parcel-cache",
+    "dev": "parcel watch js/app.js css/app.scss --dist-dir ../path/to/dist",
+    "build": "npm run clean && parcel build js/app.js css/app.scss --dist-dir ../path/to/dist"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.15.4",
+    "parcel": "^2.12.0",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "gsap": "^3.13.0"
+  },
+  "volta": {
+    "node": "20.19.5"
+  }
+}
